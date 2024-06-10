@@ -1,17 +1,30 @@
 <script>
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
+import AppFooter from './components/AppFooter.vue';
+
 export default {
   data() {
     return {
-      count: 0
+      
     }
+  },
+  components:{
+    AppHeader,
+    AppMain,
+    AppFooter
   }
 }
 </script>
 
 <template>
-
+  <AppHeader/>
+  <AppMain/>
+  <AppFooter/>
 </template>
 
-<style>
-
+<style lang="scss">
+  @use './styles/general.scss';
+  @use './styles/partials/variables';
+  @use './styles/partials/mixins';
 </style>
