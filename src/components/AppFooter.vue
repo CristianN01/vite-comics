@@ -156,6 +156,23 @@ export default {
                 </div>
             </div>
        </article>
+       <article class="bg-footer-sign-links">
+        <div class="footer">
+            <section class="sign-up">
+                <button>SIGN-UP NOW!</button>
+            </section>
+            <section class="follow-socials">
+                <h2>
+                    FOLLOW US
+                </h2>
+
+                <div class="social-links">
+
+                </div>
+            </section>
+        </div>
+
+       </article>
 </template>
 
 
@@ -164,15 +181,29 @@ export default {
         width: 100%;
     }
 
+    .bg-footer-sign-links {
+        background-color: #303030;
+        margin: 0 auto;
+        padding: 3rem;
+        position: relative;
+        z-index: 2;
+
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1550px;
+        }
+    }
+
+
+
     div.DC-image {
         background-image: url(../assets/img/dc-logo-bg.png);
-        width: 40%;
+        width: 37%;
+        height: 30rem;
         background-repeat: no-repeat;
-        background-size: 100%;
-        height: 600px;
         position: relative;
-        bottom: 140px;
-        z-index: 0;
+        bottom: 100px;
     }
 
     .links-nav-container {
@@ -191,7 +222,8 @@ export default {
         background-image: url('../assets/img/footer-bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 2rem;
+        height: 21rem;
+        overflow: hidden;
     
     }
 
