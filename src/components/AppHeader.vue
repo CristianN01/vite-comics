@@ -131,6 +131,10 @@ img {
                 padding-bottom: 3.5rem;
                 
             }
+
+            a:hover {
+                color: #0282f9;
+            }
             
         }
     }

@@ -68,7 +68,6 @@ export default {
 
     section.buy {
     background-color: #0282f9;
-    padding: 3.2rem;
     z-index: 1;
     position: relative;
 
@@ -83,6 +82,13 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 150px;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        
 
         img {
             width: 55px;

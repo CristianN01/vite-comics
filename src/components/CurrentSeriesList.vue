@@ -136,9 +136,12 @@ export default {
 
 <template>
     <section class="series-list">
-        <h3>
-            CURRENT SERIES
-        </h3>
+        <div class="blue">
+            <h3>
+                CURRENT SERIES
+            </h3>
+        </div>
+
         <div class="cards">
             <SingleCardComic v-for="(card, index) in cardsListComic" :key="index" :singleCardComic="card"/>
             <button>LOAD MORE</button>
@@ -153,7 +156,8 @@ export default {
         flex-wrap: wrap;
         justify-content: center;
         max-width: 1250px;
-        margin: 0 auto;  
+        margin: 0 auto;
+        
         
         button {
             padding: 0.50rem 3rem;
@@ -169,14 +173,14 @@ export default {
             }
     }
 
-    h3 {
+    .blue {
         background-color: #0282f9;
-        width: 301px;
+        width: 220px;
         padding: 0.75rem 1rem;
         text-align: center;
-        font-size: 25px;
+        font-size: 18px;
         position: relative;
-        left: 263px;
+        left: 334px;
         bottom: 30px;
         color: white;
     }

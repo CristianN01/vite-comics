@@ -110,6 +110,28 @@ export default {
                 name: 'Shop DC Collectibles',
             },
         ],
+        socialsLinks: [
+            {
+                id: 1,
+                img: "./src/assets/img/footer-facebook.png",
+            },
+            {
+                id: 1,
+                img: "./src/assets/img/footer-periscope.png",
+            },
+            {
+                id: 1,
+                img: "./src/assets/img/footer-pinterest.png",
+            },
+            {
+                id: 1,
+                img: "./src/assets/img/footer-twitter.png",
+            },
+            {
+                id: 5,
+                img: "./src/assets/img/footer-youtube.png",
+            },
+        ]
       
     }
   }
@@ -158,7 +180,7 @@ export default {
        </article>
        <article class="bg-footer-sign-links">
         <div class="footer">
-            <section class="sign-up">
+            <section class="sign-up special-effect ">
                 <button>SIGN-UP NOW!</button>
             </section>
             <section class="follow-socials">
@@ -166,8 +188,8 @@ export default {
                     FOLLOW US
                 </h2>
 
-                <div class="social-links">
-
+                <div class="social-links " v-for="social in socialsLinks" :key="social.id">
+                    <img :src="social.img" :alt="social.id">
                 </div>
             </section>
         </div>
@@ -181,17 +203,57 @@ export default {
         width: 100%;
     }
 
+    .follow-socials {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            color: #0282f9;
+        }
+
+        div.social-links {
+            margin-left: 1rem;
+
+            img {
+                width: 35px;
+
+                &:hover {
+                    background-color: #0282f9;
+                    border-radius: 35px;
+                    border: 1px solid white;
+                }
+            }
+
+            
+        }
+
+    }
+
+    button {
+        background-color: #303030;
+        border: 2px solid #0282f9;
+        color: white;
+        padding: 1rem 2rem;
+
+        &:hover {
+            background-color: #0282f9;
+            border: 2px solid white;
+        }
+    }
+
     .bg-footer-sign-links {
         background-color: #303030;
         margin: 0 auto;
-        padding: 3rem;
+        padding: 2rem;
         position: relative;
         z-index: 2;
 
         .footer {
             display: flex;
             justify-content: space-around;
-            max-width: 1550px;
+            max-width: 1900px;
+            align-items: center;
+            margin: 0 auto;
         }
     }
 
