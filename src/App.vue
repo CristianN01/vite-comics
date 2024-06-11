@@ -25,6 +25,6 @@ export default {
 
 <style lang="scss">
   @use './styles/general.scss';
-  @use './styles/partials/variables';
-  @use './styles/partials/mixins';
+  @use './styles/partials/variables' as *;
+  @use './styles/partials/mixins' as *;
 </style>
