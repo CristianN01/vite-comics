@@ -69,6 +69,8 @@ export default {
     section.buy {
     background-color: #0282f9;
     padding: 3.2rem;
+    z-index: 1;
+    position: relative;
 
     .width-flex {
         display: flex;

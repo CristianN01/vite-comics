@@ -119,36 +119,41 @@ export default {
 <template>
        <article class="footer-nav-links">
             <div class="width-container-footer">
-                <nav class="links-left">
-                    <h2>DC COMICS</h2>
-                    <ul>
-                        <li v-for="link in dcComicsLinks" :key="link.id">
-                            <a href="">{{ link.name }}</a>
-                        </li>
-                        <h2>SHOP</h2>
+                <div class="links-nav-container">
+                    <nav class="links">
+                        <h2>DC COMICS</h2>
                         <ul>
-                            <li v-for="link in shopLinks" :key="link.id">
+                            <li v-for="link in dcComicsLinks" :key="link.id">
+                                <a href="">{{ link.name }}</a>
+                            </li>
+                            <h2>SHOP</h2>
+                            <ul>
+                                <li v-for="link in shopLinks" :key="link.id">
+                                    <a href="">{{ link.name }}</a>
+                                </li>
+                            </ul>
+                        </ul>
+                    </nav>
+                    <nav class="links">
+                        <h2>DC</h2>
+                        <ul>
+                            <li v-for="link in DcLinks" :key="link.id">
                                 <a href="">{{ link.name }}</a>
                             </li>
                         </ul>
-                    </ul>
-                </nav>
-                <nav class="links">
-                    <h2>DC</h2>
-                    <ul>
-                        <li v-for="link in DcLinks" :key="link.id">
-                            <a href="">{{ link.name }}</a>
-                        </li>
-                    </ul>
-                </nav>
-                <nav class="links">
-                    <h2>SITES</h2>
-                    <ul>
-                        <li v-for="link in sitesLink" :key="link.id">
-                            <a href="">{{ link.name }}</a>
-                        </li>
-                    </ul>
-                </nav>
+                    </nav>
+                    <nav class="links">
+                        <h2>SITES</h2>
+                        <ul>
+                            <li v-for="link in sitesLink" :key="link.id">
+                                <a href="">{{ link.name }}</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="DC-image">
+                </div>
             </div>
        </article>
 </template>
@@ -159,21 +164,39 @@ export default {
         width: 100%;
     }
 
-    .width-container-footer {
-        max-width: 1200px;
+    div.DC-image {
+        background-image: url(../assets/img/dc-logo-bg.png);
+        width: 40%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 600px;
+        position: relative;
+        bottom: 140px;
+        z-index: 0;
+    }
+
+    .links-nav-container {
         display: flex;
         padding: 0.25rem 0;
-        margin-top: 2rem;
+    }
+
+    .width-container-footer {
+        max-width: 1550px;
+        display: flex;
         margin: 0 auto;
+        justify-content: space-around;
     }
 
     .footer-nav-links {
         background-image: url('../assets/img/footer-bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        display: flex;
         padding: 2rem;
-        
+    
+    }
+
+    .links {
+        margin-left: 1rem;
 
         ul {
             flex-wrap: wrap;
@@ -184,6 +207,7 @@ export default {
 
             a {
                 color: #7c7d7f;
+                font-weight: 200;
             }
         }
 
@@ -193,10 +217,6 @@ export default {
             padding-top: 1.5rem;
             
         }
-    }
-
-    .links {
-        margin-left: 1rem;
     }
 
     
