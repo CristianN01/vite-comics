@@ -1,38 +1,40 @@
 <script>
+import CurrentSeriesList from './CurrentSeriesList.vue';
+
 export default {
   data() {
     return {
       
     }
+  },
+  components: {
+    CurrentSeriesList
   }
 }
 </script>
 
 <template>
-       <div class="container">
-        <p>
-        --> Content goes here <--
-        </p>
-       </div>
+    <div class="jumbotron">
+        </div>
+        <CurrentSeriesList />  
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 
-.container p {
-    font-size: 1.5rem;
-    font-weight: 600;
-    text-align: left;
-    color: white;
-    font-size: 24px;
-    margin-left: 14rem;
-}
 
-div.container {
-    background-color: #1c1c1c;
-    padding: 4rem;
-    
-    
-}
+
+.jumbotron {
+        background-image: url(../assets/img/jumbotron.jpg);
+        background-size: 100%;
+        padding: 12.5rem;
+
+        // img {
+        //     width: 100%;
+        //     background-repeat: no-repeat;
+        //     height: 200px;
+        //     object-fit: cover;
+        // }
+    }
 
 </style>

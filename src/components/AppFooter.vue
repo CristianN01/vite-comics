@@ -118,42 +118,53 @@ export default {
 
 <template>
        <article class="footer-nav-links">
-        <nav class="links-left">
-            <h2>DC COMICS</h2>
-            <ul>
-                <li v-for="link in dcComicsLinks" :key="link.id">
-                    <a href="">{{ link.name }}</a>
-                </li>
-                <h2>SHOP</h2>
-                <ul>
-                    <li v-for="link in shopLinks" :key="link.id">
-                        <a href="">{{ link.name }}</a>
-                    </li>
-                </ul>
-            </ul>
-        </nav>
-        <nav class="links">
-            <h2>DC</h2>
-            <ul>
-                <li v-for="link in DcLinks" :key="link.id">
-                    <a href="">{{ link.name }}</a>
-                </li>
-            </ul>
-        </nav>
-        <nav class="links">
-            <h2>SITES</h2>
-            <ul>
-                <li v-for="link in sitesLink" :key="link.id">
-                    <a href="">{{ link.name }}</a>
-                </li>
-            </ul>
-        </nav>
+            <div class="width-container-footer">
+                <nav class="links-left">
+                    <h2>DC COMICS</h2>
+                    <ul>
+                        <li v-for="link in dcComicsLinks" :key="link.id">
+                            <a href="">{{ link.name }}</a>
+                        </li>
+                        <h2>SHOP</h2>
+                        <ul>
+                            <li v-for="link in shopLinks" :key="link.id">
+                                <a href="">{{ link.name }}</a>
+                            </li>
+                        </ul>
+                    </ul>
+                </nav>
+                <nav class="links">
+                    <h2>DC</h2>
+                    <ul>
+                        <li v-for="link in DcLinks" :key="link.id">
+                            <a href="">{{ link.name }}</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="links">
+                    <h2>SITES</h2>
+                    <ul>
+                        <li v-for="link in sitesLink" :key="link.id">
+                            <a href="">{{ link.name }}</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
        </article>
 </template>
+
 
 <style lang="scss" scoped>
     img {
         width: 100%;
+    }
+
+    .width-container-footer {
+        max-width: 1200px;
+        display: flex;
+        padding: 0.25rem 0;
+        margin-top: 2rem;
+        margin: 0 auto;
     }
 
     .footer-nav-links {
@@ -188,9 +199,7 @@ export default {
         margin-left: 1rem;
     }
 
-    .links-left {
-        margin-left: 16rem;
-    }
+    
 
 
 </style>

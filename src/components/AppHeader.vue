@@ -71,36 +71,44 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-        <section class="logo">
-            <img src="../assets/img/dc-logo.png" alt="comics-logo" class="main-dc-logo">
-        </section>
-
-        <section class="navbar">
-            <nav>
-                <ul>
-                    <li v-for="link in navComics" :key="link.id" :class="(link.active) ? 'active' : ' ' ">
-                        <a href="">{{ link.link }}</a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
+    <div class="bg-color-page">
+        <div class="width-container">
+            <section class="logo">
+                <img src="../assets/img/dc-logo.png" alt="comics-logo" class="main-dc-logo">
+            </section>
+    
+            <section class="navbar">
+                <nav>
+                    <ul>
+                        <li v-for="link in navComics" :key="link.id" :class="(link.active) ? 'active' : ' ' ">
+                            <a href="">{{ link.link }}</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
     </div>
 </template>
+
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables' as *;
 
-div.container {
-    display: flex;
-    justify-content: space-around;
+div.bg-color-page {
     background-color: #ffffff;
-    padding: 0.25rem 0;
-    margin-top: 2rem;
 }
 
+.width-container {
+    max-width: 1700px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+
 img {
-    width: 80%;
+    width: 77%;
+    padding-top: 1rem;
 }
 
 .navbar {
@@ -113,11 +121,14 @@ img {
         
         li {
             padding: 0.75rem;
-            font-weight: 600;
+            font-weight: 500;
+            padding-top: 3rem;
+            
 
             &.active {
                 color: $active-link-color;
                 border-bottom: 5px solid #517ef9;
+                padding-bottom: 3.5rem;
                 
             }
             
